@@ -286,3 +286,34 @@ opacity: 1;
     border-radius:20px
 
 }
+
+/* volume button */
+
+.volume-slider{
+    -webkit-appearance: none;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    right: -35px;
+    bottom: 80px;
+    transform: rotate(-90deg);
+    border-radius: 20px;
+    background: var(--alpha-color);
+    overflow: hidden;
+    opacity: 0;
+    display: none;
+}
+
+.volume-slider.active {
+    opacity: 1;
+    display: block;
+}
+
+
+.volume-slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 40px;
+    width: 10px;
+    background: var(--primary-color);
+    box-shadow: -200px 0 1px 200px var(--primary-color);
+}
