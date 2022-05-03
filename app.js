@@ -1,3 +1,36 @@
+let songs = [
+    { path : "./audio/Kid Cudi, Eminem - The Adventures Of Moon Man & Slim Shady (Lyric Video).mp3" ,
+      cover : "./images/inspired.jpg", artist : "Kid Cudi & Eminem" , name : "The Adventures Of Moon Man & Slim Shady"},
+    { path : "./audio/arctic monkeys _ 505 lyrics.mp3" ,
+      cover : "./images/artic.jpg", artist : "Arctic Monkeys" , name : "505"},
+    { path : "./audio/Arctic Monkeys - Do I Wanna Know (Official Video).mp3" ,
+      cover : "./images/monkeys.gif", artist : "Arctic Monkeys" , name : "Do I Wanna Know"},
+    { path : "./audio/Aoko & Jav Cast - Shining.mp3" ,
+      cover : "./images/chill-space.gif", artist : "Aoko & Jav Cast" , name : "Shining"},
+    { path : "./audio/audio1.mp3" ,
+      cover : "./images/foto-media.jpg", artist : "Unknown" , name : "Unknown"},
+    { path : "./audio/awhyle - Southside (lofi beats).mp3" ,
+      cover : "./images/Foto-sfondo.jpg", artist : "lofi beats" , name : "Southside"},
+    { path : "./audio/Ghostrifter Official - Afternoon Nap.mp3" ,
+      cover : "./images/main-sfondo.jpg", artist : "Ghostrifter" , name : "Afternoon Nap"},
+    { path : "./audio/Horizon.mp3" ,
+      cover : "./images/lone-wolf.jpg", artist : "Unknown" , name : "Horizon"},
+    { path : "./audio/Midnight Bodega.mp3" ,
+      cover : "./images/main-main.jpg", artist : "Bodega" , name : "Midnight"},
+    { path : "./audio/Not Afraid.mp3" ,
+      cover : "./images/joker.jpg", artist : "Eminem" , name : "Not Afraid"},
+    { path : "./audio/Solitude (feat. Trxxshed).mp3" ,
+      cover : "./images/main.jpg", artist : "Unknown" , name : "Solitude"},
+    { path : "./audio/Wind.mp3" ,
+      cover : "./images/sfondo4.jpg", artist : "Unknown" , name : "Wind"},
+      { path : "./audio/Michael Jackson - Billie Jean (Official Video).mp3" ,
+      cover : "./images/michael-jackson-moon-walk.gif", artist : "Michael Jackson" , name : "Billie Jean"},
+]
+
+
+
+
+
 const carousel = [...document.querySelectorAll('.carousel img')]
 
 let carouselImageIndex = 0
@@ -123,7 +156,7 @@ const setMusic = (i) => {
     artistName.innerHTML = song.artist;
     coverImage.src = song.cover
 
-    setTimtout(() => {
+    setTimeout(() => {
         seekBar.max = music.duration;
         musicDuration.innerHTML = formatTime(music.duration);
     }, 300);
@@ -207,7 +240,7 @@ repeatBtn.addEventListener('click', () => {
 // volume section
 
 volumeBtn.addEventListener('click', () => {
-    volumeBtn.classlist.toggle('active');
+    volumeBtn.classList.toggle('active');
     volumeSlider.classList.toggle('active');
 })
 

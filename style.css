@@ -277,12 +277,14 @@ opacity: 1;
 }
 
 .back-btn{
-    left: 40px;
+    top: 30px;
+    left: 10px;
     border-radius:20px
 }
 
 .nav-btn{
-    right: 40px;
+    top: 30px;
+    right: 10px;
     border-radius:20px
 
 }
